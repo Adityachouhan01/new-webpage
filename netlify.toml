@@ -1,0 +1,10 @@
+# Netlify deploy configuration
+# Repo root = this folder (package.json lives here), so no base directory needed.
+
+[build]
+  command = "npm run build"
+  publish = "dist"
+
+[build.environment]
+  # Vite 8 requires Node ^20.19.0 || >=22.12.0 — pin to avoid surprises on Netlify
+  NODE_VERSION = "22"
